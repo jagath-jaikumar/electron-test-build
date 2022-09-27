@@ -1,0 +1,25 @@
+{
+  "name": "electron-test-build",
+  "version": "1.0.0",
+  "description": "test electron build",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "author": "",
+  "devDependencies": {
+    "electron": "^21.0.0",
+    "electron-builder": "^23.3.3",
+    "electron-updater": "^5.2.1"
+  },
+  "build": {
+    "appId": "testing",
+    "win": {
+      "target": "NSIS",
+      "publish": ["github"]
+    }
+  }
+}
